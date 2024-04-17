@@ -6,22 +6,25 @@ import {BottomRail} from "@/app/components/pool-table/components/BottomRail";
 import styled from "styled-components";
 import {CORNER_POCKET_RADIUS} from "@/app/components/pool-table/components/CornerPocket";
 import {TopRail} from "@/app/components/pool-table/components/TopRail";
+import {ReactElement} from "react";
 
 const Table = styled(Column)`
     max-width: 75%;
     border-radius: ${CORNER_POCKET_RADIUS};
-    background-color: ${COLORS.PRIMARY_LIGHTEST};
+    background-color: ${COLORS.PRIMARY_LIGHTER};
 `
 
 const MidSection = styled(Row)`
     height: 100%;
+    width: 100%;
 `
-export const PoolTable = () => {
+export const PoolTable = ({children}: { children: ReactElement }) => {
     return (
-        <Table flexGrow={1} backgroundColor={COLORS.PRIMARY_LIGHTEST}>
+        <Table flexGrow={1} backgroundColor={COLORS.PRIMARY_LIGHTER}>
             <TopRail/>
-            <MidSection flexGrow={1} spaceBetween>
+            <MidSection flexGrow={1} backgroundColor={COLORS.PRIMARY_LIGHTER}>
                 <LeftRail/>
+                {children}
                 <RightRail/>
             </MidSection>
             <BottomRail/>

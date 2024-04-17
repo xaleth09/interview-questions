@@ -32,7 +32,7 @@ const WARNING = {
     WARNING: '',
 };
 
-const BALL_COLOR = {
+export const BALL_COLOR = {
     ONE: '#ffd500',
     TWO: '#003cb1',
     THREE: '#e71d00',
@@ -67,3 +67,4 @@ export const COLORS = {
 } as const;
 
 export type ColorValues = (typeof COLORS)[keyof typeof COLORS];
+export type BallColorValues = (typeof BALL_COLOR)[keyof typeof BALL_COLOR];

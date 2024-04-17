@@ -8,6 +8,7 @@ import {SidePocket} from "@/app/components/pool-table/components/SidePocket";
 const RailSection = styled(Column)`
     height: 100%;
     width: 100px;
+    margin-left: auto;
 `
 const WoodRailing = styled(Column)`
     width: 64px;

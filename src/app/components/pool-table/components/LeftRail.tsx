@@ -6,6 +6,7 @@ import React from "react";
 import {SidePocket} from "@/app/components/pool-table/components/SidePocket";
 
 const RailSection = styled(Column)`
+    justify-self: flex-start;
     height: 100%;
     width: 100px;
 `
