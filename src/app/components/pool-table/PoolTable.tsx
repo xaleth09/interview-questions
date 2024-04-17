@@ -9,7 +9,7 @@ import {CORNER_POCKET_RADIUS} from "@/app/components/pool-table/CornerPocket";
 const Table = styled(Column)`
     max-width: 75%;
     border-radius: ${CORNER_POCKET_RADIUS};
-    background-color: mediumslateblue;
+    background-color: ${COLORS.PRIMARY_LIGHTEST};
 `
 
 const MidSection = styled(Row)`
