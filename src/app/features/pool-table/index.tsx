@@ -8,6 +8,8 @@ import {CORNER_POCKET_RADIUS} from "@/app/features/pool-table/components/CornerP
 import {TopRail} from "@/app/features/pool-table/components/TopRail";
 import {ReactElement} from "react";
 
+export const HORIZONTAL_CENTER = '48%';
+
 const Table = styled(Column)`
     max-width: 75%;
     border-radius: ${CORNER_POCKET_RADIUS};
@@ -16,6 +18,7 @@ const Table = styled(Column)`
 `
 
 const MidSection = styled(Row)`
+    position: relative;
     height: 100%;
     width: 100%;
 `

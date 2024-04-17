@@ -3,7 +3,7 @@
 import {COLORS} from "@/app/design-tokens";
 import styled from "styled-components";
 import {Padding} from "@/app/components";
-import {PoolTable} from "@/app/features/pool-table";
+import {HORIZONTAL_CENTER, PoolTable} from "@/app/features/pool-table";
 import {Ball} from "@/app/features/pool-table/components/Ball";
 
 const Main = styled.main`
@@ -14,13 +14,12 @@ const Main = styled.main`
     display: flex;
 `;
 
-
 export default function Home() {
     return (
         <Main>
             <Padding flexGrow={1} size='LG'>
                 <PoolTable>
-                    <Ball position={{top: 200, left: 200}} number={2}/>
+                    <Ball position={{top: '10%', left: HORIZONTAL_CENTER}} number={2}/>
                 </PoolTable>
             </Padding>
         </Main>

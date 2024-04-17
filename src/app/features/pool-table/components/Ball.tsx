@@ -3,7 +3,7 @@ import {BALL_COLOR, BallColorValues} from "@/app/design-tokens";
 import {useMemo} from "react";
 
 type BallProps = {
-    position: { top?: number, left?: number, bottom?: number, right?: number }
+    position: { top?: string, left?: string, bottom?: string, right?: string }
     number: number,
 }
 
@@ -22,10 +22,10 @@ const Sphere = styled.div<SphereProps>`
     ${({color, position: {top, left, bottom, right}}) => {
         return `
             color: ${color};
-            ${top ? `top: ${top}px;` : ''}
-            ${left ? `left: ${left}px;` : ''}
-            ${bottom ? `bottom: ${bottom}px;` : ''}
-            ${right ? `right: ${right}px;` : ''}
+            ${top ? `top: ${top};` : ''}
+            ${left ? `left: ${left};` : ''}
+            ${bottom ? `bottom: ${bottom};` : ''}
+            ${right ? `right: ${right};` : ''}
         `
     }}
 `
