@@ -1,10 +1,11 @@
 import {COLORS} from "@/app/design-tokens";
-import {Column, Row, TopRail} from "@/app/components";
-import {LeftRail} from "@/app/components/pool-table/LeftRail";
-import {RightRail} from "@/app/components/pool-table/RightRail";
-import {BottomRail} from "@/app/components/pool-table/BottomRail";
+import {Column, Row} from "@/app/components";
+import {LeftRail} from "@/app/components/pool-table/components/LeftRail";
+import {RightRail} from "@/app/components/pool-table/components/RightRail";
+import {BottomRail} from "@/app/components/pool-table/components/BottomRail";
 import styled from "styled-components";
-import {CORNER_POCKET_RADIUS} from "@/app/components/pool-table/CornerPocket";
+import {CORNER_POCKET_RADIUS} from "@/app/components/pool-table/components/CornerPocket";
+import {TopRail} from "@/app/components/pool-table/components/TopRail";
 
 const Table = styled(Column)`
     max-width: 75%;

@@ -3,7 +3,7 @@
 import {COLORS} from "@/app/design-tokens";
 import styled from "styled-components";
 import {Padding} from "@/app/components";
-import {PoolTable} from "@/app/components/pool-table/PoolTable";
+import {PoolTable} from "@/app/components/pool-table";
 
 const Main = styled.main`
     width: 100%;
