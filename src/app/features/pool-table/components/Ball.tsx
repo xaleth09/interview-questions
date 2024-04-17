@@ -11,8 +11,8 @@ type SphereProps = { color: BallColorValues } & Pick<BallProps, 'position'>
 
 const Sphere = styled.div<SphereProps>`
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-image: radial-gradient(at 60% 40%, #fff, transparent 70%),
     radial-gradient(at 70% 80%, #000, transparent 70%);
