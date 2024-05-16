@@ -1,0 +1,802 @@
+[
+  {
+    "id": 1,
+    "name": "Azithromycin",
+    "strength": "200mg",
+    "prescriber": "Dr. Garcia",
+    "prescriber_address": "456 Elm St.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 2,
+    "name": "Simvastatin",
+    "strength": "10ml",
+    "prescriber": "Dr. Garcia",
+    "prescriber_address": "202 Pine Ln.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 3,
+    "name": "Amlodipine",
+    "strength": "200mg",
+    "prescriber": "Dr. Jones",
+    "prescriber_address": "303 Cedar Blvd.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 4,
+    "name": "Losartan",
+    "strength": "200mg",
+    "prescriber": "Dr. Jones",
+    "prescriber_address": "707 Redwood Rd.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 5,
+    "name": "Omeprazole",
+    "strength": "10mg",
+    "prescriber": "Dr. Brown",
+    "prescriber_address": "404 Birch St.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 6,
+    "name": "Doxycycline",
+    "strength": "200mg",
+    "prescriber": "Dr. Garcia",
+    "prescriber_address": "202 Pine Ln.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 7,
+    "name": "Prednisone",
+    "strength": "500mg",
+    "prescriber": "Dr. Jones",
+    "prescriber_address": "707 Redwood Rd.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 8,
+    "name": "Tylenol",
+    "strength": "500mg",
+    "prescriber": "Dr. Brown",
+    "prescriber_address": "123 Fake St.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 9,
+    "name": "Citalopram",
+    "strength": "10ml",
+    "prescriber": "Dr. Jones",
+    "prescriber_address": "606 Spruce Dr.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 10,
+    "name": "Furosemide",
+    "strength": "10ml",
+    "prescriber": "Dr. Martinez",
+    "prescriber_address": "707 Redwood Rd.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 11,
+    "name": "Prednisone",
+    "strength": "10ml",
+    "prescriber": "Dr. Brown",
+    "prescriber_address": "303 Cedar Blvd.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 12,
+    "name": "Furosemide",
+    "strength": "5ml",
+    "prescriber": "Dr. Williams",
+    "prescriber_address": "789 Maple Ave.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 13,
+    "name": "Lisinopril",
+    "strength": "20mg",
+    "prescriber": "Dr. Jones",
+    "prescriber_address": "303 Cedar Blvd.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 14,
+    "name": "Ibuprofen",
+    "strength": "200mg",
+    "prescriber": "Dr. Williams",
+    "prescriber_address": "789 Maple Ave.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 15,
+    "name": "Losartan",
+    "strength": "5ml",
+    "prescriber": "Dr. Martinez",
+    "prescriber_address": "505 Chestnut Ct.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 16,
+    "name": "Amoxicillin",
+    "strength": "200mg",
+    "prescriber": "Dr. Smith",
+    "prescriber_address": "303 Cedar Blvd.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 17,
+    "name": "Amoxicillin",
+    "strength": "100mg",
+    "prescriber": "Dr. Johnson",
+    "prescriber_address": "123 Fake St.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 18,
+    "name": "Metformin",
+    "strength": "500mg",
+    "prescriber": "Dr. Jones",
+    "prescriber_address": "505 Chestnut Ct.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 19,
+    "name": "Citalopram",
+    "strength": "5ml",
+    "prescriber": "Dr. Miller",
+    "prescriber_address": "789 Maple Ave.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 20,
+    "name": "Sertraline",
+    "strength": "10mg",
+    "prescriber": "Dr. Jones",
+    "prescriber_address": "123 Fake St.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 21,
+    "name": "Metformin",
+    "strength": "50mg",
+    "prescriber": "Dr. Martinez",
+    "prescriber_address": "123 Fake St.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 22,
+    "name": "Ibuprofen",
+    "strength": "1g",
+    "prescriber": "Dr. Davis",
+    "prescriber_address": "707 Redwood Rd.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 23,
+    "name": "Omeprazole",
+    "strength": "5ml",
+    "prescriber": "Dr. Jones",
+    "prescriber_address": "101 Oak Rd.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 24,
+    "name": "Ibuprofen",
+    "strength": "5ml",
+    "prescriber": "Dr. Johnson",
+    "prescriber_address": "303 Cedar Blvd.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 25,
+    "name": "Furosemide",
+    "strength": "2g",
+    "prescriber": "Dr. Garcia",
+    "prescriber_address": "404 Birch St.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 26,
+    "name": "Losartan",
+    "strength": "100mg",
+    "prescriber": "Dr. Miller",
+    "prescriber_address": "202 Pine Ln.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 27,
+    "name": "Atorvastatin",
+    "strength": "10ml",
+    "prescriber": "Dr. Martinez",
+    "prescriber_address": "789 Maple Ave.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 28,
+    "name": "Losartan",
+    "strength": "500mg",
+    "prescriber": "Dr. Wilson",
+    "prescriber_address": "123 Fake St.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 29,
+    "name": "Gabapentin",
+    "strength": "10ml",
+    "prescriber": "Dr. Brown",
+    "prescriber_address": "303 Cedar Blvd.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 30,
+    "name": "Simvastatin",
+    "strength": "50mg",
+    "prescriber": "Dr. Johnson",
+    "prescriber_address": "707 Redwood Rd.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 31,
+    "name": "Doxycycline",
+    "strength": "20mg",
+    "prescriber": "Dr. Wilson",
+    "prescriber_address": "789 Maple Ave.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 32,
+    "name": "Simvastatin",
+    "strength": "10mg",
+    "prescriber": "Dr. Johnson",
+    "prescriber_address": "404 Birch St.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 33,
+    "name": "Doxycycline",
+    "strength": "10mg",
+    "prescriber": "Dr. Wilson",
+    "prescriber_address": "303 Cedar Blvd.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 34,
+    "name": "Lisinopril",
+    "strength": "1g",
+    "prescriber": "Dr. Wilson",
+    "prescriber_address": "123 Fake St.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 35,
+    "name": "Sertraline",
+    "strength": "50mg",
+    "prescriber": "Dr. Williams",
+    "prescriber_address": "101 Oak Rd.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 36,
+    "name": "Sertraline",
+    "strength": "20mg",
+    "prescriber": "Dr. Jones",
+    "prescriber_address": "404 Birch St.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 37,
+    "name": "Doxycycline",
+    "strength": "500mg",
+    "prescriber": "Dr. Miller",
+    "prescriber_address": "123 Fake St.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 38,
+    "name": "Tylenol",
+    "strength": "20mg",
+    "prescriber": "Dr. Wilson",
+    "prescriber_address": "707 Redwood Rd.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 39,
+    "name": "Hydrochlorothiazide",
+    "strength": "500mg",
+    "prescriber": "Dr. Wilson",
+    "prescriber_address": "303 Cedar Blvd.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 40,
+    "name": "Amoxicillin",
+    "strength": "10ml",
+    "prescriber": "Dr. Wilson",
+    "prescriber_address": "123 Fake St.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 41,
+    "name": "Clonazepam",
+    "strength": "20mg",
+    "prescriber": "Dr. Martinez",
+    "prescriber_address": "303 Cedar Blvd.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 42,
+    "name": "Azithromycin",
+    "strength": "1g",
+    "prescriber": "Dr. Davis",
+    "prescriber_address": "789 Maple Ave.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 43,
+    "name": "Ibuprofen",
+    "strength": "10mg",
+    "prescriber": "Dr. Jones",
+    "prescriber_address": "505 Chestnut Ct.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 44,
+    "name": "Atorvastatin",
+    "strength": "200mg",
+    "prescriber": "Dr. Williams",
+    "prescriber_address": "123 Fake St.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 45,
+    "name": "Hydrochlorothiazide",
+    "strength": "5ml",
+    "prescriber": "Dr. Miller",
+    "prescriber_address": "505 Chestnut Ct.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 46,
+    "name": "Tylenol",
+    "strength": "10mg",
+    "prescriber": "Dr. Garcia",
+    "prescriber_address": "707 Redwood Rd.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 47,
+    "name": "Metformin",
+    "strength": null,
+    "prescriber": "Dr. Williams",
+    "prescriber_address": "303 Cedar Blvd.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 48,
+    "name": "Amlodipine",
+    "strength": "1g",
+    "prescriber": "Dr. Wilson",
+    "prescriber_address": "101 Oak Rd.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 49,
+    "name": "Clonazepam",
+    "strength": "10ml",
+    "prescriber": "Dr. Jones",
+    "prescriber_address": "303 Cedar Blvd.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 50,
+    "name": "Omeprazole",
+    "strength": "10ml",
+    "prescriber": "Dr. Wilson",
+    "prescriber_address": "456 Elm St.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 51,
+    "name": "Atorvastatin",
+    "strength": "500mg",
+    "prescriber": "Dr. Davis",
+    "prescriber_address": "456 Elm St.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 52,
+    "name": "Amlodipine",
+    "strength": "2g",
+    "prescriber": "Dr. Garcia",
+    "prescriber_address": "456 Elm St.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 53,
+    "name": "Azithromycin",
+    "strength": "100mg",
+    "prescriber": "Dr. Williams",
+    "prescriber_address": "303 Cedar Blvd.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 54,
+    "name": "Azithromycin",
+    "strength": "50mg",
+    "prescriber": "Dr. Wilson",
+    "prescriber_address": "123 Fake St.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 55,
+    "name": "Sertraline",
+    "strength": "100mg",
+    "prescriber": "Dr. Williams",
+    "prescriber_address": "123 Fake St.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 56,
+    "name": "Atorvastatin",
+    "strength": "20mg",
+    "prescriber": "Dr. Davis",
+    "prescriber_address": "202 Pine Ln.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 57,
+    "name": "Prednisone",
+    "strength": "5ml",
+    "prescriber": "Dr. Smith",
+    "prescriber_address": "456 Elm St.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 58,
+    "name": "Metformin",
+    "strength": "5ml",
+    "prescriber": "Dr. Smith",
+    "prescriber_address": "101 Oak Rd.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 59,
+    "name": "Tylenol",
+    "strength": "1g",
+    "prescriber": "Dr. Wilson",
+    "prescriber_address": "456 Elm St.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 60,
+    "name": "Amoxicillin",
+    "strength": "500mg",
+    "prescriber": "Dr. Smith",
+    "prescriber_address": "456 Elm St.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 61,
+    "name": "Hydrochlorothiazide",
+    "strength": "50mg",
+    "prescriber": "Dr. Johnson",
+    "prescriber_address": "707 Redwood Rd.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 62,
+    "name": "Omeprazole",
+    "strength": "20mg",
+    "prescriber": "Dr. Martinez",
+    "prescriber_address": "123 Fake St.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 63,
+    "name": "Citalopram",
+    "strength": null,
+    "prescriber": "Dr. Jones",
+    "prescriber_address": "606 Spruce Dr.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 64,
+    "name": "Clonazepam",
+    "strength": "50mg",
+    "prescriber": "Dr. Garcia",
+    "prescriber_address": "606 Spruce Dr.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 65,
+    "name": "Prednisone",
+    "strength": "10mg",
+    "prescriber": "Dr. Garcia",
+    "prescriber_address": "505 Chestnut Ct.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 66,
+    "name": "Atorvastatin",
+    "strength": "10mg",
+    "prescriber": "Dr. Williams",
+    "prescriber_address": "123 Fake St.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 67,
+    "name": "Lisinopril",
+    "strength": "10mg",
+    "prescriber": "Dr. Miller",
+    "prescriber_address": "123 Fake St.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 68,
+    "name": "Amlodipine",
+    "strength": "10ml",
+    "prescriber": "Dr. Garcia",
+    "prescriber_address": "505 Chestnut Ct.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 69,
+    "name": "Amoxicillin",
+    "strength": "20mg",
+    "prescriber": "Dr. Brown",
+    "prescriber_address": "404 Birch St.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 70,
+    "name": "Atorvastatin",
+    "strength": "1g",
+    "prescriber": "Dr. Martinez",
+    "prescriber_address": "707 Redwood Rd.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 71,
+    "name": "Citalopram",
+    "strength": "100mg",
+    "prescriber": "Dr. Williams",
+    "prescriber_address": "789 Maple Ave.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 72,
+    "name": "Simvastatin",
+    "strength": "5ml",
+    "prescriber": "Dr. Brown",
+    "prescriber_address": "101 Oak Rd.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 73,
+    "name": "Amlodipine",
+    "strength": "100mg",
+    "prescriber": "Dr. Jones",
+    "prescriber_address": "202 Pine Ln.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 74,
+    "name": "Advil",
+    "strength": "1g",
+    "prescriber": "Dr. Brown",
+    "prescriber_address": "123 Fake St.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 75,
+    "name": "Ibuprofen",
+    "strength": "20mg",
+    "prescriber": "Dr. Garcia",
+    "prescriber_address": "404 Birch St.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 76,
+    "name": "Losartan",
+    "strength": "1g",
+    "prescriber": "Dr. Johnson",
+    "prescriber_address": "456 Elm St.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 77,
+    "name": "Furosemide",
+    "strength": "500mg",
+    "prescriber": "Dr. Davis",
+    "prescriber_address": "123 Fake St.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 78,
+    "name": "Furosemide",
+    "strength": "100mg",
+    "prescriber": "Dr. Garcia",
+    "prescriber_address": "123 Fake St.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 79,
+    "name": "Losartan",
+    "strength": "20mg",
+    "prescriber": "Dr. Jones",
+    "prescriber_address": "789 Maple Ave.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 80,
+    "name": "Citalopram",
+    "strength": "20mg",
+    "prescriber": "Dr. Garcia",
+    "prescriber_address": "101 Oak Rd.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 81,
+    "name": "Tylenol",
+    "strength": "10ml",
+    "prescriber": "Dr. Williams",
+    "prescriber_address": "456 Elm St.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 82,
+    "name": "Simvastatin",
+    "strength": "100mg",
+    "prescriber": "Dr. Davis",
+    "prescriber_address": "404 Birch St.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 83,
+    "name": "Clonazepam",
+    "strength": "5ml",
+    "prescriber": "Dr. Miller",
+    "prescriber_address": "789 Maple Ave.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 84,
+    "name": "Tylenol",
+    "strength": "5ml",
+    "prescriber": "Dr. Smith",
+    "prescriber_address": "707 Redwood Rd.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 85,
+    "name": "Simvastatin",
+    "strength": "1g",
+    "prescriber": "Dr. Johnson",
+    "prescriber_address": "456 Elm St.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 86,
+    "name": "Gabapentin",
+    "strength": "2g",
+    "prescriber": "Dr. Williams",
+    "prescriber_address": "303 Cedar Blvd.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 87,
+    "name": "Citalopram",
+    "strength": "2g",
+    "prescriber": "Dr. Miller",
+    "prescriber_address": "101 Oak Rd.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 88,
+    "name": "Hydrochlorothiazide",
+    "strength": "20mg",
+    "prescriber": "Dr. Smith",
+    "prescriber_address": "456 Elm St.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 89,
+    "name": "Losartan",
+    "strength": "10mg",
+    "prescriber": "Dr. Miller",
+    "prescriber_address": "123 Fake St.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 90,
+    "name": "Sertraline",
+    "strength": "1g",
+    "prescriber": "Dr. Martinez",
+    "prescriber_address": "505 Chestnut Ct.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 91,
+    "name": "Prednisone",
+    "strength": "50mg",
+    "prescriber": "Dr. Garcia",
+    "prescriber_address": "789 Maple Ave.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 92,
+    "name": "Atorvastatin",
+    "strength": "2g",
+    "prescriber": "Dr. Brown",
+    "prescriber_address": "303 Cedar Blvd.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 93,
+    "name": "Advil",
+    "strength": "500mg",
+    "prescriber": "Dr. Johnson",
+    "prescriber_address": "404 Birch St.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 94,
+    "name": "Clonazepam",
+    "strength": "1g",
+    "prescriber": "Dr. Garcia",
+    "prescriber_address": "707 Redwood Rd.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 95,
+    "name": "Amoxicillin",
+    "strength": "1g",
+    "prescriber": "Dr. Davis",
+    "prescriber_address": "123 Fake St.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 96,
+    "name": "Furosemide",
+    "strength": "200mg",
+    "prescriber": "Dr. Miller",
+    "prescriber_address": "505 Chestnut Ct.",
+    "dispense_as_written": "False"
+  },
+  {
+    "id": 97,
+    "name": "Ibuprofen",
+    "strength": "500mg",
+    "prescriber": "Dr. Davis",
+    "prescriber_address": "505 Chestnut Ct.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 98,
+    "name": "Doxycycline",
+    "strength": "5ml",
+    "prescriber": "Dr. Davis",
+    "prescriber_address": "303 Cedar Blvd.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 99,
+    "name": "Prednisone",
+    "strength": null,
+    "prescriber": "Dr. Johnson",
+    "prescriber_address": "404 Birch St.",
+    "dispense_as_written": "True"
+  },
+  {
+    "id": 100,
+    "name": "Tylenol",
+    "strength": "50mg",
+    "prescriber": "Dr. Garcia",
+    "prescriber_address": "606 Spruce Dr.",
+    "dispense_as_written": "True"
+  }
+]

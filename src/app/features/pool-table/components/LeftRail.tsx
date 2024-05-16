@@ -29,7 +29,7 @@ const Bumper = styled(Row)<BumperProps>`
     border: .25px solid ${COLORS.BLACK};
     ${({position}) => position === 'above-pocket' ? `
     border-radius: 4px 20px 14px 4px;
-    clip-path: polygon(0 0, 100% 10px, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     ` : `
     border-radius: 4px 14px 20px 4px;
     clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);

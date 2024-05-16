@@ -6,9 +6,9 @@ import {BottomRail} from "@/app/features/pool-table/components/BottomRail";
 import styled from "styled-components";
 import {CORNER_POCKET_RADIUS} from "@/app/features/pool-table/components/CornerPocket";
 import {TopRail} from "@/app/features/pool-table/components/TopRail";
-import {ReactElement} from "react";
+import {ReactNode} from "react";
 
-export const HORIZONTAL_CENTER = '48%';
+export const POOL_TABLE_HORIZONTAL_CENTER = '48%';
 
 const Table = styled(Column)`
     max-width: 75%;
@@ -22,7 +22,7 @@ const MidSection = styled(Row)`
     height: 100%;
     width: 100%;
 `
-export const PoolTable = ({children}: { children?: ReactElement }) => {
+export const PoolTable = ({children}: { children?: ReactNode }) => {
     return (
         <Table flexGrow={1} backgroundColor={COLORS.PRIMARY_LIGHTER}>
             <TopRail/>

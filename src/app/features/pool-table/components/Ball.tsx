@@ -2,6 +2,8 @@ import styled from "styled-components";
 import {BALL_COLOR, BallColorValues} from "@/app/design-tokens";
 import {useMemo} from "react";
 
+export const BALL_DIAMETER = 50;
+
 type BallProps = {
     position: { top?: string, left?: string, bottom?: string, right?: string }
     number: number,
@@ -11,8 +13,8 @@ type SphereProps = { color: BallColorValues } & Pick<BallProps, 'position'>
 
 const Sphere = styled.div<SphereProps>`
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: ${BALL_DIAMETER}px;
+    height: ${BALL_DIAMETER}px;
     border-radius: 50%;
     background-image: radial-gradient(at 60% 40%, #fff, transparent 70%),
     radial-gradient(at 70% 80%, #000, transparent 70%);
@@ -21,7 +23,7 @@ const Sphere = styled.div<SphereProps>`
 
     ${({color, position: {top, left, bottom, right}}) => {
         return `
-            color: ${color};
+            background-color: ${color};
             ${top ? `top: ${top};` : ''}
             ${left ? `left: ${left};` : ''}
             ${bottom ? `bottom: ${bottom};` : ''}
