@@ -7,8 +7,7 @@ import {TestButtons} from "@/app/features/leetcode-playground/TestButtons";
 export const LeetCodePlayground = ({}) => {
     const [display, setDisplay] = useState<DisplayStateType>({result: '', expectedResult: '', testName: ''})
 
-    const {functionName, instructions, longestOnes, ...tests} = useMaxConsecutiveOnesIII()
-    const callingFunction = longestOnes;
+    const {functionName, instructions, problemSetFunction, tests} = useMaxConsecutiveOnesIII()
 
     const {result, expectedResult, testName} = display
 
@@ -37,7 +36,7 @@ export const LeetCodePlayground = ({}) => {
                 </Column>
             )}
             <Spacing height={'SM'}/>
-            <TestButtons tests={tests} testFunction={callingFunction} setDisplay={setDisplay}/>
+            <TestButtons tests={tests} problemSetFunction={problemSetFunction} setDisplay={setDisplay}/>
         </Column>
     )
 }

@@ -36,10 +36,18 @@ export const useMaxConsecutiveOnesIII = () => {
     };
 
     return {
-        instructions: 'Given a binary array nums and an integer k, return the maximum number of consecutive 1\'s in the array if you can flip at most k 0\'s',
         functionName: "longestOnes()",
-        test1: {nums: [1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], k: 2, expectedResult: 6},
-        test2: {nums: [0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1], k: 3, expectedResult: 10},
-        longestOnes
+        instructions: 'Given a binary array nums and an integer k, return the maximum number of consecutive 1\'s in the array if you can flip at most k 0\'s',
+        tests: [
+            {
+                params: {nums: [1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0], k: 2,},
+                expectedResult: 6,
+            },
+            {
+                params: {nums: [0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1], k: 3},
+                expectedResult: 10,
+            }
+        ],
+        problemSetFunction: longestOnes
     }
 }

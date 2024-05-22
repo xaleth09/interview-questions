@@ -1,6 +1,14 @@
+export type ProblemSet = {
+    functionName: string,
+    instructions: string,
+    tests: Test[],
+    problemSetFunction: ProblemSetFunction,
+}
+
+export type ProblemSetFunction = (...args: any[]) => any
+
 export type Test = {
-    nums: number[]
-    k: number,
+    params: any;
     expectedResult: any;
 }
 

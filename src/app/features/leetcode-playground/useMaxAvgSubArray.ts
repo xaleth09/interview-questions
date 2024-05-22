@@ -29,9 +29,21 @@ export const useMaxAvgSubArray = () => {
 
     return {
         functionName: "findMaxAverageSubArray()",
-        test1: {nums: [1, 12, -5, -6, 50, 3], k: 4, expectedResult: 12.75},
-        test2: {nums: [0, 4, 0, 3, 2], k: 1, expectedResult: 4},
-        test3: {nums: [4, 2, 1, 3, 3], k: 2, expectedResult: 3},
-        findMaxAverage
+        instructions: '',
+        tests: [
+            {
+                params: {nums: [1, 12, -5, -6, 50, 3], k: 4},
+                expectedResult: 12.75
+            },
+            {
+                params: {nums: [0, 4, 0, 3, 2], k: 1},
+                expectedResult: 4
+            },
+            {
+                params: {nums: [4, 2, 1, 3, 3], k: 2},
+                expectedResult: 3
+            },
+        ],
+        problemSetFunction: findMaxAverage
     }
 }

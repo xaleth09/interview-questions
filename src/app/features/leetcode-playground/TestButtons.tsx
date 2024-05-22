@@ -1,18 +1,18 @@
-import {DisplayStateType, Test} from "@/app/features/leetcode-playground/types";
+import {DisplayStateType, ProblemSetFunction, Test} from "@/app/features/leetcode-playground/types";
 import {Spacing} from "@/app/components";
 import React from "react";
 
-export const TestButtons = ({tests, testFunction, setDisplay}: {
+export const TestButtons = ({tests, problemSetFunction, setDisplay}: {
     tests: Test[],
-    testFunction: () => any,
+    problemSetFunction: ProblemSetFunction,
     setDisplay: (newDisplayState: DisplayStateType) => any
 }) => {
-    return tests.map((test, index) => {
-        const {expectedResult, ...rest} = test
+    return tests?.map((test, index) => {
+        const {expectedResult, params} = test
         const testName = `test${index + 1}`
         const handleOnClick = () => {
             console.clear()
-            const result = testFunction(rest)
+            const result = problemSetFunction(params)
             setDisplay({
                 result,
                 expectedResult: expectedResult.toString(),
