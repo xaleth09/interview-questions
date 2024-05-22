@@ -1,27 +1,24 @@
 'use client';
 
+import React from 'react'
 import {COLORS} from "@/app/design-tokens";
 import styled from "styled-components";
-import {Padding} from "@/app/components";
-import {POOL_TABLE_HORIZONTAL_CENTER, PoolTable} from "@/app/features/pool-table";
-import {Ball} from "@/app/features/pool-table/components/Ball";
+import {LeetCodePlayground} from "@/app/features/leetcode-playground/LeetCodePlayground";
 
 const Main = styled.main`
     width: 100%;
-    height: 125%;
     min-height: 100%;
     background-color: ${COLORS.WHITE};
     display: flex;
+    padding: 56px 156px;
 `;
 
-export default function Home() {
+const Home = () => {
     return (
         <Main>
-            <Padding flexGrow={1} size='LG'>
-                <PoolTable>
-                    <Ball position={{top: '10%', left: POOL_TABLE_HORIZONTAL_CENTER}} number={2}/>
-                </PoolTable>
-            </Padding>
+            <LeetCodePlayground/>
         </Main>
     );
 }
+
+export default Home
