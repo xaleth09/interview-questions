@@ -1,20 +1,22 @@
 import React from 'react'
+import {Column} from "./Flex";
+import styled from "styled-components";
 
-type Props = {}
-
-const cardStyle = ({}) => {
-    return {
-        backgroundColor: 'white',
-        borderRadius: '4px',
-        border: 'solid grey 1px',
-        padding: '16px',
-    }
+type Props = {
+    children: React.ReactNode
 }
 
-export const Card = ({}) => {
+const StyledColumn = styled(Column)`
+    background-color: white;
+    border-radius: 4px;
+    border: solid grey 1px;
+    padding: 16px;
+`
+
+export const Card = ({children}: Props) => {
     return (
-        <div style={cardStyle()}>
-            <p>Hello, World!</p>
-        </div>
+        <StyledColumn>
+            {children}
+        </StyledColumn>
     )
 }
