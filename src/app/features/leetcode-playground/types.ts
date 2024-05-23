@@ -1,5 +1,5 @@
-export type ProblemSet = {
-    functionName: string,
+export type ProblemSetType = {
+    name: string,
     instructions: string,
     tests: Test[],
     problemSetFunction: ProblemSetFunction,

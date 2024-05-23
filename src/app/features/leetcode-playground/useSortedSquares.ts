@@ -1,6 +1,6 @@
-import {ProblemSet} from "@/app/features/leetcode-playground/types";
+import {ProblemSetType} from "@/app/features/leetcode-playground/types";
 
-export const useSortedSquares = (): ProblemSet => {
+export const useSortedSquares = (): ProblemSetType => {
     const sortedSquares = (nums: number[]) => {
         let leftIndex = 0;
         let rightIndex = nums.length - 1;
@@ -23,7 +23,7 @@ export const useSortedSquares = (): ProblemSet => {
     }
 
     return {
-        functionName: "useSortedSquares()",
+        name: "useSortedSquares()",
         instructions: '',
         tests: [
             {params: [-4, -1, 0, 3, 10], expectedResult: 'expectedResult'},

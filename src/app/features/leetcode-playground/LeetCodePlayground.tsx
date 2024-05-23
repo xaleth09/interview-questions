@@ -1,42 +1,21 @@
-import React, {useState} from 'react'
-import {Column, Row, Spacing} from "@/app/components";
+import React from 'react'
+import {Column, Spacing} from "@/app/components";
+import {ProblemSet} from "@/app/features/leetcode-playground/ProblemSet";
 import {useMaxConsecutiveOnesIII} from "@/app/features/leetcode-playground/useMaxConsecutiveOnesIII";
-import {DisplayStateType} from "@/app/features/leetcode-playground/types";
-import {TestButtons} from "@/app/features/leetcode-playground/TestButtons";
+import {useMaxAvgSubArray} from "@/app/features/leetcode-playground/useMaxAvgSubArray";
+import {useSortedSquares} from "@/app/features/leetcode-playground/useSortedSquares";
 
 export const LeetCodePlayground = ({}) => {
-    const [display, setDisplay] = useState<DisplayStateType>({result: '', expectedResult: '', testName: ''})
-
-    const {functionName, instructions, problemSetFunction, tests} = useMaxConsecutiveOnesIII()
-
-    const {result, expectedResult, testName} = display
-
+    const useMaxConsecutiveOnesProblemSet = useMaxConsecutiveOnesIII();
+    const useMaxAvgSubArrayProblemSet = useMaxAvgSubArray();
+    const useSortedSquaresProblemSet = useSortedSquares();
     return (
-        <Column centerHorizontally>
-            <Column center>
-                <h2>{functionName}</h2>
-                <span style={{marginTop: '8px', maxWidth: '400px', textAlign: 'center'}}>{instructions}</span>
-            </Column>
-            <Spacing height={'SM'}/>
-            {testName ? (
-                <Column>
-                    <Row center>
-                        <h3>Last test ran: {testName}</h3>
-                    </Row>
-                    <Spacing height={'MD'}/>
-                    <Row spaceBetween>
-                        <div>result: {result}</div>
-                        <div>expected: {expectedResult}</div>
-                    </Row>
-                </Column>
-            ) : (
-                <Column center>
-                    <h3>Press a button to run a test!</h3>
-                    <Spacing height={'LG'}/>
-                </Column>
-            )}
-            <Spacing height={'SM'}/>
-            <TestButtons tests={tests} problemSetFunction={problemSetFunction} setDisplay={setDisplay}/>
+        <Column>
+            <ProblemSet problemSet={useMaxConsecutiveOnesProblemSet}/>
+            <Spacing height={"XL"}/>
+            <ProblemSet problemSet={useMaxAvgSubArrayProblemSet}/>
+            <Spacing height={"XL"}/>
+            <ProblemSet problemSet={useSortedSquaresProblemSet}/>
         </Column>
     )
 }

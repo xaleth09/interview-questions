@@ -24,12 +24,12 @@ export const TestButtons = ({tests, problemSetFunction, setDisplay}: {
             <>
                 <button
                     key={testName}
-                    style={{width: '300px', backgroundColor: 'cornflowerblue'}}
+                    style={{width: '50%', backgroundColor: 'cornflowerblue'}}
                     onClick={handleOnClick}
                 >
                     Run {testName}!
                 </button>
-                {index === tests.length - 1 ? (
+                {index !== tests.length - 1 ? (
                     <Spacing height={"SM"}/>
                 ) : null}
             </>

@@ -28,7 +28,7 @@ export const useMaxAvgSubArray = () => {
     };
 
     return {
-        functionName: "findMaxAverageSubArray()",
+        name: "findMaxAverageSubArray()",
         instructions: '',
         tests: [
             {
