@@ -24,7 +24,7 @@ export const TestButtons = ({tests, problemSetFunction, setDisplay}: {
         return (
             <React.Fragment key={testName}>
                 <button
-                    style={{width: '50%', backgroundColor: 'cornflowerblue'}}
+                    style={{backgroundColor: 'cornflowerblue'}}
                     onClick={handleOnClick}
                 >
                     Run {testName}!

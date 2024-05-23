@@ -32,22 +32,26 @@ export const ProblemSet = ({problemSet}: Props) => {
 
     return (
         <Card>
-            <H2 color={"chartreuse"} centered>{name}</H2>
-            <span style={{marginTop: '8px', maxWidth: '400px', textAlign: 'center'}}>{instructions}</span>
-            <Spacing height={'SM'}/>
+            <H2 color={"chartreuse"}>{name}</H2>
+            <span style={{marginTop: '8px', maxWidth: '400px'}}>{instructions}</span>
+            <Spacing height={'MD'}/>
             <Column>
-                <H3 centered>Last test ran: {testName}</H3>
+                <H3>Last test ran: {testName}</H3>
                 <Spacing height={'MD'}/>
-                <Span centered>testParams:</Span>
-                <Spacing height={"XXS"}/>
-                <Span>{testParams}</Span>
+                <Row flexGrow={1} spaceBetween>
+                    <Span>testParams:</Span>
+                    <Span>{testParams}</Span>
+                </Row>
                 <Spacing height={"MD"}/>
                 <Row flexGrow={1} spaceBetween>
                     <Span>result:</Span>
                     <Span>{result}</Span>
                 </Row>
                 <Spacing height={"XS"}/>
-                <Span>expected: {expectedResult}</Span>
+                <Row flexGrow={1} spaceBetween>
+                    <Span>expected:</Span>
+                    <Span>{expectedResult}</Span>
+                </Row>
             </Column>
             <Spacing height={'LG'}/>
             <TestButtons tests={tests} problemSetFunction={problemSetFunction} setDisplay={setDisplay}/>
