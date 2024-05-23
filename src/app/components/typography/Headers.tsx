@@ -1,21 +1,11 @@
 import styled from "styled-components";
-import {COLORS, ColorValues} from "@/app/design-tokens";
+import {BaseTypography, BaseTypographyProps} from "@/app/components/typography/BaseTypography";
 
-type HeaderProps = {
-    centered?: boolean;
-    color?: ColorValues;
-}
+type H1Props = {} & BaseTypographyProps<'h1'>;
+export const H1 = styled(BaseTypography).attrs({as: 'h1'})<H1Props>``
 
-const Header = styled.p<HeaderProps>`
-    ${({centered, color}: HeaderProps) => `
-        ${centered ? 'text-align: center;' : ''}
-        color: ${color ? color : COLORS.BLACK}
-    `}
-}
-`
+type H2Props = {} & BaseTypographyProps<'h2'>;
+export const H2 = styled(BaseTypography).attrs({as: 'h2'})<H2Props>``
 
-export const H1 = styled(Header).attrs({as: 'h1'})<HeaderProps>``
-
-export const H2 = styled(Header).attrs({as: 'h2'})<HeaderProps>``
-
-export const H3 = styled(Header).attrs({as: 'h3'})<HeaderProps>``
+type H3Props = {} & BaseTypographyProps<'h3'>;
+export const H3 = styled(BaseTypography).attrs({as: 'h3'})<H3Props>``

@@ -1,15 +1,27 @@
 import React, {useState} from 'react'
-import {Card, Column, H3, Spacing} from "@/app/components";
+import {Card, Column, H2, H3, Row, Spacing, Span} from "@/app/components";
 import {TestButtons} from "@/app/features/leetcode-playground/TestButtons";
 import {DisplayStateType, ProblemSetType} from "@/app/features/leetcode-playground/types";
+import styled from "styled-components";
+
+const Grid = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+`
 
 type Props = {
     problemSet: ProblemSetType
 }
 
 export const ProblemSet = ({problemSet}: Props) => {
-    const [display, setDisplay] = useState<DisplayStateType>({result: '', expectedResult: '', testName: ''})
-    const {result, expectedResult, testName} = display
+    const [display, setDisplay] = useState<DisplayStateType>({
+        result: '',
+        testParams: '',
+        expectedResult: '',
+        testName: ''
+    })
+    const {result, testParams, expectedResult, testName} = display
 
     const {
         name,
@@ -20,31 +32,25 @@ export const ProblemSet = ({problemSet}: Props) => {
 
     return (
         <Card>
-            <Column centerHorizontally>
-                <Column center>
-                    <h2>{name}</h2>
-                    <span style={{marginTop: '8px', maxWidth: '400px', textAlign: 'center'}}>{instructions}</span>
-                </Column>
-                <Spacing height={'SM'}/>
-                {name ? (
-                    <Column>
-                        <H3>Last test ran: {name}</H3>
-                        <Spacing height={'MD'}/>
-                        <Column spaceBetween>
-                            <div>result: {result}</div>
-                            <Spacing height={"XS"}/>
-                            <div>expected: {expectedResult}</div>
-                        </Column>
-                    </Column>
-                ) : (
-                    <Column center>
-                        <h3>Press a button to run a test!</h3>
-                        <Spacing height={'LG'}/>
-                    </Column>
-                )}
-                <Spacing height={'SM'}/>
-                <TestButtons tests={tests} problemSetFunction={problemSetFunction} setDisplay={setDisplay}/>
+            <H2 color={"chartreuse"} centered>{name}</H2>
+            <span style={{marginTop: '8px', maxWidth: '400px', textAlign: 'center'}}>{instructions}</span>
+            <Spacing height={'SM'}/>
+            <Column>
+                <H3 centered>Last test ran: {testName}</H3>
+                <Spacing height={'MD'}/>
+                <Span centered>testParams:</Span>
+                <Spacing height={"XXS"}/>
+                <Span>{testParams}</Span>
+                <Spacing height={"MD"}/>
+                <Row flexGrow={1} spaceBetween>
+                    <Span>result:</Span>
+                    <Span>{result}</Span>
+                </Row>
+                <Spacing height={"XS"}/>
+                <Span>expected: {expectedResult}</Span>
             </Column>
+            <Spacing height={'LG'}/>
+            <TestButtons tests={tests} problemSetFunction={problemSetFunction} setDisplay={setDisplay}/>
         </Card>
     )
 }

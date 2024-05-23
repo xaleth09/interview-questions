@@ -4,7 +4,7 @@ import React, {useEffect, useState} from 'react'
 import {COLORS} from "@/app/design-tokens";
 import styled from "styled-components";
 import {Row, Spacing} from "@/app/components";
-import {steakhouses} from "@/app/features/leetcode-playground/steakhouses";
+import {steakhouses} from "@/app/features/configurable-form/steakhouses";
 
 const Main = styled.main`
     width: 100%;

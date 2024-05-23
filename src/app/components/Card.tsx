@@ -16,7 +16,7 @@ type Props = {
 
 export const Card = ({children}: Props) => {
     return (
-        <StyledColumn>
+        <StyledColumn flexGrow={1}>
             {children}
         </StyledColumn>
     )

@@ -14,16 +14,16 @@ export const TestButtons = ({tests, problemSetFunction, setDisplay}: {
             console.clear()
             const result = problemSetFunction(params)
             setDisplay({
-                result,
+                result: JSON.stringify(result),
+                testParams: JSON.stringify(params),
                 expectedResult: expectedResult.toString(),
                 testName: testName
             })
         }
 
         return (
-            <>
+            <React.Fragment key={testName}>
                 <button
-                    key={testName}
                     style={{width: '50%', backgroundColor: 'cornflowerblue'}}
                     onClick={handleOnClick}
                 >
@@ -32,7 +32,7 @@ export const TestButtons = ({tests, problemSetFunction, setDisplay}: {
                 {index !== tests.length - 1 ? (
                     <Spacing height={"SM"}/>
                 ) : null}
-            </>
+            </React.Fragment>
         )
     })
 }

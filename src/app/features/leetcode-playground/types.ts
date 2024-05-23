@@ -12,4 +12,9 @@ export type Test = {
     expectedResult: any;
 }
 
-export type DisplayStateType = { result: string | number, expectedResult: string | number, testName: string }
+export type DisplayStateType = {
+    result: string | number,
+    testParams: any,
+    expectedResult: string | number,
+    testName: string
+}

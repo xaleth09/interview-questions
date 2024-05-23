@@ -1,21 +1,24 @@
 import React from 'react'
-import {Column, Spacing} from "@/app/components";
+import {Column} from "@/app/components";
 import {ProblemSet} from "@/app/features/leetcode-playground/ProblemSet";
-import {useMaxConsecutiveOnesIII} from "@/app/features/leetcode-playground/useMaxConsecutiveOnesIII";
-import {useMaxAvgSubArray} from "@/app/features/leetcode-playground/useMaxAvgSubArray";
-import {useSortedSquares} from "@/app/features/leetcode-playground/useSortedSquares";
+import {useFindMissingNumber} from "@/app/features/leetcode-playground/problem-sets/useFindMissingNumber";
 
 export const LeetCodePlayground = ({}) => {
-    const useMaxConsecutiveOnesProblemSet = useMaxConsecutiveOnesIII();
-    const useMaxAvgSubArrayProblemSet = useMaxAvgSubArray();
-    const useSortedSquaresProblemSet = useSortedSquares();
+    // const useMaxConsecutiveOnesProblemSet = useMaxConsecutiveOnesIII();
+    // const useMaxAvgSubArrayProblemSet = useMaxAvgSubArray();
+    // const useSortedSquaresProblemSet = useSortedSquares();
+    // const useIsPangramProblemSet = useIsPangram()
+    const useFindMissingNumberProblemSet = useFindMissingNumber()
+
     return (
         <Column>
-            <ProblemSet problemSet={useMaxConsecutiveOnesProblemSet}/>
-            <Spacing height={"XL"}/>
-            <ProblemSet problemSet={useMaxAvgSubArrayProblemSet}/>
-            <Spacing height={"XL"}/>
-            <ProblemSet problemSet={useSortedSquaresProblemSet}/>
+            <ProblemSet problemSet={useFindMissingNumberProblemSet}/>
+            {/*<Spacing height={"XL"}/>*/}
+            {/*<ProblemSet problemSet={useMaxConsecutiveOnesProblemSet}/>*/}
+            {/*<Spacing height={"XL"}/>*/}
+            {/*<ProblemSet problemSet={useMaxAvgSubArrayProblemSet}/>*/}
+            {/*<Spacing height={"XL"}/>*/}
+            {/*<ProblemSet problemSet={useSortedSquaresProblemSet}/>*/}
         </Column>
     )
 }
