@@ -1,7 +1,7 @@
 import {ProblemSetType} from "@/app/features/leetcode-playground/types";
 
 export const useSortedSquares = (): ProblemSetType => {
-    const sortedSquares = (nums: number[]) => {
+    const sortedSquares = ({nums}: { nums: number[] }) => {
         let leftIndex = 0;
         let rightIndex = nums.length - 1;
         let result = new Array(nums.length);
@@ -26,9 +26,9 @@ export const useSortedSquares = (): ProblemSetType => {
         name: "useSortedSquares()",
         instructions: '',
         tests: [
-            {params: [-4, -1, 0, 3, 10], expectedResult: 'expectedResult'},
-            {params: [-20, -1, 0, 3, 100], expectedResult: 'expectedResult'},
-            {params: [-5, -4, -3, -2, -1], expectedResult: 'expectedResult'},
+            {params: {nums: [-4, -1, 0, 3, 10]}, expectedResult: 'expectedResult'},
+            {params: {nums: [-20, -1, 0, 3, 100]}, expectedResult: 'expectedResult'},
+            {params: {nums: [-5, -4, -3, -2, -1]}, expectedResult: 'expectedResult'},
         ],
         problemSetFunction: sortedSquares
     }

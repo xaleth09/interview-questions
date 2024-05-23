@@ -13,9 +13,12 @@ export const TestButtons = ({tests, problemSetFunction, setDisplay}: {
         const handleOnClick = () => {
             console.clear()
             const result = problemSetFunction(params)
+            const prettyJSONParams = JSON.stringify(params, null, 2);
+            const formattedParamsString = prettyJSONParams.replace(/,/g, ',\n');
+            console.log("rawr formattedParamsString", formattedParamsString);
             setDisplay({
                 result: JSON.stringify(result),
-                testParams: JSON.stringify(params),
+                testParams: formattedParamsString,
                 expectedResult: expectedResult.toString(),
                 testName: testName
             })

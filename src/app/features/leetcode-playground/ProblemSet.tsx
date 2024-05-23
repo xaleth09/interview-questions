@@ -40,7 +40,7 @@ export const ProblemSet = ({problemSet}: Props) => {
                 <Spacing height={'MD'}/>
                 <Row flexGrow={1} spaceBetween>
                     <Span>testParams:</Span>
-                    <Span>{testParams}</Span>
+                    <Span color={"green"} whiteSpace={'pre-wrap'}>{testParams}</Span>
                 </Row>
                 <Spacing height={"MD"}/>
                 <Row flexGrow={1} spaceBetween>

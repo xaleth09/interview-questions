@@ -1,7 +1,7 @@
 import {ProblemSetType} from "@/app/features/leetcode-playground/types";
 
 export const useIsPangram = (): ProblemSetType => {
-    const isPangram = (sentence: string) => {
+    const isPangram = ({sentence}: { sentence: string }) => {
         let seen: { [letter: string]: number } = {};
 
         for (let letter of sentence) {
@@ -17,8 +17,8 @@ export const useIsPangram = (): ProblemSetType => {
             '\n' +
             'Given a string sentence containing only lowercase English letters, return true if sentence is a pangram, or false otherwise.',
         tests: [
-            {params: 'thequickbrownfoxjumpsoverthelazydog', expectedResult: 'true'},
-            {params: 'thisisnotapangram', expectedResult: 'false'},
+            {params: {sentence: 'thequickbrownfoxjumpsoverthelazydog'}, expectedResult: 'true'},
+            {params: {sentence: 'thisisnotapangram'}, expectedResult: 'false'},
         ],
         problemSetFunction: isPangram
     }
