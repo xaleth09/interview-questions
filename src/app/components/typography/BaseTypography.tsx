@@ -10,12 +10,13 @@ export type BaseTypographyProps<T extends React.ElementType> = {
     children: React.ReactNode | string;
 } & React.ComponentPropsWithoutRef<T>
 
-const StyledBaseTypography = styled.div <BaseTypographyProps<any>>`
-    ${({centered, color, whiteSpace}) => `
-        ${centered ? 'text-align: center;' : ''}
-        color: ${color};
-        white-space: ${whiteSpace};
+const StyledBaseTypography = styled.div<BaseTypographyProps<any>>`
+    ${({$centered, $color, $whiteSpace}) => `
+        ${$centered ? 'text-align: center;' : ''}
+        color: ${$color};
+        white-space: ${$whiteSpace};
     `}
+}
 `
 
 export const BaseTypography = <T extends React.ElementType = 'p'>
@@ -25,14 +26,16 @@ export const BaseTypography = <T extends React.ElementType = 'p'>
      color = COLORS.BLACK,
      whiteSpace = 'normal',
      children,
+     className,
  }: BaseTypographyProps<T>) => {
     const Component = as || 'p';
     return (
         <StyledBaseTypography
             as={Component}
-            centered={centered}
-            color={color}
-            whiteSpace={whiteSpace}
+            $centered={centered}
+            $color={color}
+            $whiteSpace={whiteSpace}
+            className={className}
         >
             {children}
         </StyledBaseTypography>

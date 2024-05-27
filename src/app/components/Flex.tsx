@@ -172,38 +172,38 @@ const getAlignContent = (
 };
 
 type StyledFlexProps = {
-    flexDirection: 'row' | 'column';
-    flexWrap: FlexWrap;
-    flexJustifyContent: JustifyContent;
-    flexAlignContent: AlignContent;
-    flexAlignItems: AlignItems;
-    flexGrow?: number;
-    flexShrink?: number;
-    flexBasis?: number | string;
+    $flexDirection: 'row' | 'column';
+    $flexWrap: FlexWrap;
+    $flexJustifyContent: JustifyContent;
+    $flexAlignContent: AlignContent;
+    $flexAlignItems: AlignItems;
+    $flexGrow?: number;
+    $flexShrink?: number;
+    $flexBasis?: number | string;
     backgroundColor?: ColorValues;
     testID?: string;
 };
 const StyledFlex = styled.div<StyledFlexProps>`
     display: flex;
     ${({
-           flexGrow,
-           flexShrink,
-           flexBasis,
-           flexDirection,
-           flexWrap,
-           flexJustifyContent,
-           flexAlignContent,
-           flexAlignItems,
+           $flexGrow,
+           $flexShrink,
+           $flexBasis,
+           $flexDirection,
+           $flexWrap,
+           $flexJustifyContent,
+           $flexAlignContent,
+           $flexAlignItems,
            backgroundColor,
        }) => `
-    ${flexGrow ? `flex-grow: ${flexGrow};` : ''}
-    ${flexShrink ? `flex-shrink: ${flexBasis};` : ''}
-    ${flexBasis ? `flex-basis: ${flexBasis};` : ''}
-    ${flexDirection ? `flex-direction: ${flexDirection};` : ''}
-    ${flexWrap ? `flex-wrap: ${flexWrap};` : ''}
-    ${flexJustifyContent ? `justify-content: ${flexJustifyContent};` : ''}
-    ${flexAlignContent ? `align-content: ${flexAlignContent};` : ''}
-    ${flexAlignItems ? `align-items: ${flexAlignItems};` : ''}
+    ${$flexGrow ? `flex-grow: ${$flexGrow};` : ''}
+    ${$flexShrink ? `flex-shrink: ${$flexBasis};` : ''}
+    ${$flexBasis ? `flex-basis: ${$flexBasis};` : ''}
+    ${$flexDirection ? `flex-direction: ${$flexDirection};` : ''}
+    ${$flexWrap ? `flex-wrap: ${$flexWrap};` : ''}
+    ${$flexJustifyContent ? `justify-content: ${$flexJustifyContent};` : ''}
+    ${$flexAlignContent ? `align-content: ${$flexAlignContent};` : ''}
+    ${$flexAlignItems ? `align-items: ${$flexAlignItems};` : ''}
     background-color: ${backgroundColor ?? COLORS.TRANSPARENT};
   `}
 `;
@@ -252,14 +252,14 @@ export const Row: FC<RowProps> = ({
 
     return (
         <StyledFlex
-            flexGrow={flexGrow}
-            flexShrink={flexShrink}
-            flexBasis={flexBasis}
-            flexDirection="row"
-            flexWrap={flexWrap}
-            flexJustifyContent={flexJustifyContent}
-            flexAlignItems={flexAlignItems}
-            flexAlignContent={flexAlignContent}
+            $flexGrow={flexGrow}
+            $flexShrink={flexShrink}
+            $flexBasis={flexBasis}
+            $flexDirection="row"
+            $flexWrap={flexWrap}
+            $flexJustifyContent={flexJustifyContent}
+            $flexAlignItems={flexAlignItems}
+            $flexAlignContent={flexAlignContent}
             testID={testID}
             className={className}
             backgroundColor={backgroundColor}
@@ -320,14 +320,14 @@ export const Column: FC<ColumnProps> = ({
 
     return (
         <StyledFlex
-            flexGrow={flexGrow}
-            flexShrink={flexShrink}
-            flexBasis={flexBasis}
-            flexDirection="column"
-            flexWrap={flexWrap}
-            flexJustifyContent={flexJustifyContent}
-            flexAlignItems={flexAlignItems}
-            flexAlignContent={flexAlignContent}
+            $flexGrow={flexGrow}
+            $flexShrink={flexShrink}
+            $flexBasis={flexBasis}
+            $flexDirection="column"
+            $flexWrap={flexWrap}
+            $flexJustifyContent={flexJustifyContent}
+            $flexAlignItems={flexAlignItems}
+            $flexAlignContent={flexAlignContent}
             testID={testID}
             className={className}
             backgroundColor={backgroundColor}

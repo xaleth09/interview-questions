@@ -1,23 +1,24 @@
-import React from 'react'
+import React from 'react';
 import {BaseTypography, BaseTypographyProps} from "@/app/components/typography/BaseTypography";
 import styled from "styled-components";
 
-const StyledSpan = styled(BaseTypography).attrs({as: 'span'})`
+const StyledSpan = styled(BaseTypography)``
 
-`
+type Props = BaseTypographyProps<'span'>;
 
-type Props = {} & BaseTypographyProps<'span'>
-
-export const Span = ({centered, color, whiteSpace, children, className}: Props) => {
-
+export const Span: React.FC<Props> = ({centered, color, whiteSpace, children, className, ...props}) => {
     return (
-        <StyledSpan as={'span'}
-                    centered={centered}
-                    color={color}
-                    whiteSpace={whiteSpace}
-                    className={className}
+        <StyledSpan
+            forwardedAs={'span'}
+            centered={centered}
+            color={color}
+            whiteSpace={whiteSpace}
+            className={className}
+            {...props}
         >
             {children}
         </StyledSpan>
-    )
-}
+    );
+};
+
+export default Span;
