@@ -15,7 +15,6 @@ export const TestButtons = ({tests, problemSetFunction, setDisplay}: {
             const result = problemSetFunction(params)
             const prettyJSONParams = JSON.stringify(params, null, 2);
             const formattedParamsString = prettyJSONParams.replace(/,/g, ',\n');
-            console.log("rawr formattedParamsString", formattedParamsString);
             setDisplay({
                 result: JSON.stringify(result),
                 testParams: formattedParamsString,

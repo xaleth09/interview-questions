@@ -3,24 +3,30 @@
 import {apiResult1} from "@/app/data";
 import {useState} from "react";
 
-const Input = ({type, rest, onChange}) => {
+const Input = ({type, rest, onChange}: {
+    type: 'TEXT_INPUT' | 'DROPDOWN_SELECT';
+    rest: any;
+    onChange: (id: number, value: string) => void;
+}) => {
     switch (type) {
         case 'TEXT_INPUT':
             const {id, label, placeholder} = rest;
-            return <div>
-                <span>{label}</span>
-                <input
-                    onChange={(event) => {
-                        onChange(id, event.target.value)
-                    }}
-                    placeholder={placeholder}/>
-            </div>
+            return (
+                <div>
+                    <span>{label}</span>
+                    <input
+                        onChange={(event) => {
+                            onChange(id, event.target.value)
+                        }}
+                        placeholder={placeholder}/>
+                </div>
+            )
         case 'DROPDOWN_SELECT':
             const {default_value, options} = rest;
             return (
                 <select>
-                    {options.map((option) => (
-                        <option value={option.toLowerCase()}>
+                    {options.map((option: string) => (
+                        <option key={option} value={option.toLowerCase()}>
                             {option}
                         </option>
                     ))}
@@ -29,11 +35,12 @@ const Input = ({type, rest, onChange}) => {
     }
 }
 
-const Inputs = ({inputs, onChange}) => {
+const Inputs = ({inputs, onChange}: { inputs: any, onChange: (id: number, value: string) => void }) => {
     return (
         <>
+            {/*@ts-ignore*/}
             {inputs.map(({type, ...rest}) => (
-                <Input type={type} rest={rest} onChange={onChange}/>
+                <Input key={`input-${type}`} type={type} rest={rest} onChange={onChange}/>
             ))}
         </>
     )
@@ -42,9 +49,8 @@ const Inputs = ({inputs, onChange}) => {
 export const ConfigurableForm = () => {
     const {title, page_title, inputs} = apiResult1;
     const [formInputData, setFormInputData] = useState({})
-    console.log("rawr", formInputData)
 
-    const handleOnChange = (id, value) => {
+    const handleOnChange = (id: number, value: string) => {
         const updatedFormInputData = {...formInputData, [id]: value}
         setFormInputData(updatedFormInputData)
     }

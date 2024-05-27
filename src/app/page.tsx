@@ -10,7 +10,7 @@ const Main = styled.main`
     min-height: 100%;
     background-color: ${COLORS.WHITE};
     display: flex;
-    padding: 56px 128px;
+    padding: 64px;
 `;
 
 const Home = () => {

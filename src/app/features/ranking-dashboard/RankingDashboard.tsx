@@ -3,15 +3,15 @@
 import React, {useEffect, useState} from 'react'
 import {COLORS} from "@/app/design-tokens";
 import styled from "styled-components";
-import {Row, Spacing} from "@/app/components";
-import {steakhouses} from "@/app/features/configurable-form/steakhouses";
+import {Column, Row, Spacing} from "@/app/components";
+import {steakhouses} from "@/app/features/ranking-dashboard/steakhouses";
 
 const Main = styled.main`
     width: 100%;
     min-height: 100%;
     background-color: ${COLORS.WHITE};
     display: flex;
-    padding: 56px 156px;
+    padding: 56px 56px;
 `;
 
 const RankIncrementButton = styled.button<{ color?: string, disabled?: boolean }>`
@@ -51,7 +51,7 @@ export const RankingDashboard = () => {
         setRankedSteakhouses(steakhousesWithRanks);
     }, []);
 
-    const handlePress = (type: 'uprank' | 'downrank', clickedRank: number) => {
+    const handleRankChangePress = (type: 'uprank' | 'downrank', clickedRank: number) => {
         setRankedSteakhouses((prevState) => {
             const newSteakhouseRankMap = {...prevState}
 
@@ -61,12 +61,25 @@ export const RankingDashboard = () => {
             // if downrank swap clickedRank with a higher value rank which is a lower rank
             let neighborSteakhouseIndex = type === 'uprank' ? clickedRank - 1 : clickedRank + 1;
             let neighborSteakhouse = {...prevState[neighborSteakhouseIndex]};
-            console.log("-------")
-            console.log("rawr clickedRank:", clickedRank, `neighborSteakhouseIndex: ${neighborSteakhouseIndex}`)
-            console.log("rawr clickedSteakhouse:", clickedSteakhouse, `neighborSteakhouse: ${neighborSteakhouse}`)
-            console.log("-------")
+
+            // swap
             newSteakhouseRankMap[clickedRank] = neighborSteakhouse;
             newSteakhouseRankMap[neighborSteakhouseIndex] = clickedSteakhouse;
+
+            return newSteakhouseRankMap;
+        })
+    }
+
+    // TODO: Optimize by splitting entries so that you only have to re-assign items after deleted item
+    const handleDeletePress = (clickedRank: number) => {
+        setRankedSteakhouses((prevState) => {
+            let newRank = 1;
+            const newSteakhouseRankMap = Object.entries(prevState).reduce((newMap: SteakHousesWithRanks, [rank, steakhouse], index) => {
+                if (Number.parseInt(rank, 10) !== clickedRank) {
+                    newMap[newRank++] = steakhouse
+                }
+                return newMap;
+            }, {})
 
             return newSteakhouseRankMap;
         })
@@ -77,14 +90,19 @@ export const RankingDashboard = () => {
             {/*<LeetCodePlayground/>*/}
             <Row spaceBetween>
                 <h1>Name</h1>
-                <h1>Rank</h1>
+                <Row>
+                    <h1>Rank</h1>
+                    <Spacing width={'XL'}/>
+                    <Spacing width={'XL'}/>
+                    <Spacing width={'XL'}/>
+                </Row>
             </Row>
             {Object.entries(rankedSteakhouses)?.map(([rank, {name, link}], index) => {
                 const rankAsNumber = parseInt(rank, 10)
                 const numSteakhouses = Object.keys(rankedSteakhouses).length;
 
                 return (
-                    <React.Fragment key={name}>
+                    <Column key={name}>
                         <Row key={name} spaceBetween flexGrow={1}>
                             <Link href={link} rel="noopener noreferrer" target="_blank">
                                 <h2>{name}</h2>
@@ -96,7 +114,7 @@ export const RankingDashboard = () => {
                                     color={"green"}
                                     disabled={index === 0}
                                     onClick={() => {
-                                        handlePress('uprank', rankAsNumber)
+                                        handleRankChangePress('uprank', rankAsNumber)
                                     }}>
                                     &#9650;
                                 </RankIncrementButton>
@@ -105,14 +123,20 @@ export const RankingDashboard = () => {
                                     color={"red"}
                                     disabled={rankAsNumber === numSteakhouses}
                                     onClick={() => {
-                                        handlePress('downrank', rankAsNumber)
+                                        handleRankChangePress('downrank', rankAsNumber)
                                     }}>
                                     &#9660;
                                 </RankIncrementButton>
+                                <Spacing width={"XXS"}/>
+                                <button onClick={() => {
+                                    handleDeletePress(rankAsNumber);
+                                }}>
+                                    Delete
+                                </button>
                             </Row>
                         </Row>
                         {rankAsNumber !== numSteakhouses ? <Spacing height={"XS"}/> : null}
-                    </React.Fragment>
+                    </Column>
                 )
             })}
         </Main>
