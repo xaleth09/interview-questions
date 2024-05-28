@@ -11,13 +11,12 @@ type StyledButtonProps = {
 const StyledButton = styled.button<StyledButtonProps>`
     ${({size, disabled, loading}) => `
         width: ${size === 'fullwidth' ? '100%' : 'initial'};
-        color: 
     `}
 `
 
 type Props = {
     onClick?: (event?: React.MouseEvent<HTMLButtonElement>) => void;
-    children: string;
+    children: string | string[];
 } & StyledButtonProps;
 
 export const Button = ({

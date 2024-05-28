@@ -7,14 +7,16 @@ export type BaseTypographyProps<T extends React.ElementType> = {
     centered?: boolean;
     color?: ColorValues;
     whiteSpace?: 'normal' | 'nowrap' | 'pre' | 'pre-wrap' | 'pre-line' | 'break-spaces';
+    wordBreak?: 'normal' | 'break-all' | 'keep-all' | 'break-word';
     children: React.ReactNode | string;
 } & React.ComponentPropsWithoutRef<T>
 
 const StyledBaseTypography = styled.div<BaseTypographyProps<any>>`
-    ${({$centered, $color, $whiteSpace}) => `
+    ${({$centered, $color, $whiteSpace, $wordBreak}) => `
         ${$centered ? 'text-align: center;' : ''}
         color: ${$color};
         white-space: ${$whiteSpace};
+        word-break: ${$wordBreak};
     `}
 }
 `
@@ -25,16 +27,21 @@ export const BaseTypography = <T extends React.ElementType = 'p'>
      centered,
      color = COLORS.BLACK,
      whiteSpace = 'normal',
+     wordBreak = 'break-word',
      children,
+     style,
      className,
  }: BaseTypographyProps<T>) => {
     const Component = as || 'p';
+    console.log("rawr wtf")
     return (
         <StyledBaseTypography
             as={Component}
             $centered={centered}
             $color={color}
             $whiteSpace={whiteSpace}
+            $wordBreak={wordBreak}
+            style={style}
             className={className}
         >
             {children}

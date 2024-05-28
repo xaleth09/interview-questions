@@ -1,5 +1,5 @@
 import {DisplayStateType, ProblemSetFunction, Test} from "@/app/features/leetcode-playground/types";
-import {Spacing} from "@/app/components";
+import {Button, Spacing} from "@/app/components";
 import React from "react";
 
 export const TestButtons = ({tests, problemSetFunction, setDisplay}: {
@@ -13,11 +13,11 @@ export const TestButtons = ({tests, problemSetFunction, setDisplay}: {
         const handleOnClick = () => {
             console.clear()
             const result = problemSetFunction(params)
-            const prettyJSONParams = JSON.stringify(params, null, 2);
-            const formattedParamsString = prettyJSONParams.replace(/,/g, ',\n');
+            const prettyJSONParams = JSON.stringify(params);
+            const formattedParamsString = prettyJSONParams.replace(/],/g, ',\n');
             setDisplay({
                 result: JSON.stringify(result),
-                testParams: formattedParamsString,
+                testParams: prettyJSONParams,
                 expectedResult: expectedResult.toString(),
                 testName: testName
             })
@@ -25,12 +25,9 @@ export const TestButtons = ({tests, problemSetFunction, setDisplay}: {
 
         return (
             <React.Fragment key={testName}>
-                <button
-                    style={{backgroundColor: 'cornflowerblue'}}
-                    onClick={handleOnClick}
-                >
+                <Button onClick={handleOnClick}>
                     Run {testName}!
-                </button>
+                </Button>
                 {index !== tests.length - 1 ? (
                     <Spacing height={"SM"}/>
                 ) : null}

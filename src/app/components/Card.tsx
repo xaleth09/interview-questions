@@ -1,6 +1,6 @@
 import React from 'react'
-import {Column} from "./Flex";
 import styled from "styled-components";
+import {Column} from "@/app/components/Flex";
 
 const StyledColumn = styled(Column)`
     background-color: white;

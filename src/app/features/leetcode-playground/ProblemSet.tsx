@@ -2,13 +2,6 @@ import React, {useState} from 'react'
 import {Card, Column, H2, H3, Row, Spacing, Span} from "@/app/components";
 import {TestButtons} from "@/app/features/leetcode-playground/TestButtons";
 import {DisplayStateType, ProblemSetType} from "@/app/features/leetcode-playground/types";
-import styled from "styled-components";
-
-const Grid = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-`
 
 type Props = {
     problemSet: ProblemSetType
@@ -32,23 +25,26 @@ export const ProblemSet = ({problemSet}: Props) => {
 
     return (
         <Card>
-            <H2 color={"chartreuse"}>{name}</H2>
-            <span style={{marginTop: '8px', maxWidth: '400px'}}>{instructions}</span>
-            <Spacing height={'MD'}/>
-            <Column>
+            <Column flexGrow={1}>
+                <H2>{name}</H2>
+                <Spacing height={'SM'}/>
+                <Span centered>{instructions}</Span>
+                <Spacing height={'MD'}/>
+            </Column>
+            <Column flexGrow={1}>
                 <H3>Last test ran: {testName}</H3>
                 <Spacing height={'MD'}/>
-                <Row flexGrow={1} spaceBetween>
+                <Row spaceBetween wrap>
                     <Span>testParams:</Span>
                     <Span color={"green"} whiteSpace={'pre-wrap'}>{testParams}</Span>
                 </Row>
                 <Spacing height={"MD"}/>
-                <Row flexGrow={1} spaceBetween>
+                <Row spaceBetween>
                     <Span>result:</Span>
                     <Span>{result}</Span>
                 </Row>
                 <Spacing height={"XS"}/>
-                <Row flexGrow={1} spaceBetween>
+                <Row spaceBetween>
                     <Span>expected:</Span>
                     <Span>{expectedResult}</Span>
                 </Row>

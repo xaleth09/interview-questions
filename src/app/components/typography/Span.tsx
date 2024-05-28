@@ -6,7 +6,7 @@ const StyledSpan = styled(BaseTypography)``
 
 type Props = BaseTypographyProps<'span'>;
 
-export const Span: React.FC<Props> = ({centered, color, whiteSpace, children, className, ...props}) => {
+export const Span: React.FC<Props> = ({centered, color, whiteSpace, children, className, style, ...props}) => {
     return (
         <StyledSpan
             forwardedAs={'span'}
@@ -14,7 +14,7 @@ export const Span: React.FC<Props> = ({centered, color, whiteSpace, children, cl
             color={color}
             whiteSpace={whiteSpace}
             className={className}
-            {...props}
+            style={style}
         >
             {children}
         </StyledSpan>
