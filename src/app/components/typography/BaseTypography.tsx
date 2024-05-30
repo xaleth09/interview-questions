@@ -33,7 +33,6 @@ export const BaseTypography = <T extends React.ElementType = 'p'>
      className,
  }: BaseTypographyProps<T>) => {
     const Component = as || 'p';
-    console.log("rawr wtf")
     return (
         <StyledBaseTypography
             as={Component}

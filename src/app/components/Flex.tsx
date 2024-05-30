@@ -21,6 +21,7 @@ type FlexProps = {
     stretchItems?: boolean;
     baseline?: boolean;
     backgroundColor?: ColorValues;
+    gap?: string;
     testID?: string;
     className?: string; // { [string]: string | number, ... },
     children?: React.ReactNode;
@@ -180,7 +181,8 @@ type StyledFlexProps = {
     $flexGrow?: number;
     $flexShrink?: number;
     $flexBasis?: number | string;
-    backgroundColor?: ColorValues;
+    $backgroundColor?: ColorValues;
+    $gap?: string;
     testID?: string;
 };
 const StyledFlex = styled.div<StyledFlexProps>`
@@ -194,7 +196,8 @@ const StyledFlex = styled.div<StyledFlexProps>`
            $flexJustifyContent,
            $flexAlignContent,
            $flexAlignItems,
-           backgroundColor,
+           $backgroundColor,
+           $gap,
        }) => `
     ${$flexGrow ? `flex-grow: ${$flexGrow};` : ''}
     ${$flexShrink ? `flex-shrink: ${$flexBasis};` : ''}
@@ -204,7 +207,8 @@ const StyledFlex = styled.div<StyledFlexProps>`
     ${$flexJustifyContent ? `justify-content: ${$flexJustifyContent};` : ''}
     ${$flexAlignContent ? `align-content: ${$flexAlignContent};` : ''}
     ${$flexAlignItems ? `align-items: ${$flexAlignItems};` : ''}
-    background-color: ${backgroundColor ?? COLORS.TRANSPARENT};
+    ${$gap ? `gap: ${$gap};` : ''}
+    background-color: ${$backgroundColor ?? COLORS.TRANSPARENT};
   `}
 `;
 
@@ -235,6 +239,7 @@ export const Row: FC<RowProps> = ({
                                       testID,
                                       children,
                                       backgroundColor,
+                                      gap,
                                       className,
                                   }) => {
     const flexWrap = getFlexWrap(wrap, wrapReverse);
@@ -262,7 +267,8 @@ export const Row: FC<RowProps> = ({
             $flexAlignContent={flexAlignContent}
             testID={testID}
             className={className}
-            backgroundColor={backgroundColor}
+            $gap={gap}
+            $backgroundColor={backgroundColor}
         >
             {children}
         </StyledFlex>
@@ -296,6 +302,7 @@ export const Column: FC<ColumnProps> = ({
                                             testID,
                                             children,
                                             backgroundColor,
+                                            gap,
                                             className,
                                         }) => {
     const flexWrap = getFlexWrap(wrap, wrapReverse);
@@ -330,7 +337,8 @@ export const Column: FC<ColumnProps> = ({
             $flexAlignContent={flexAlignContent}
             testID={testID}
             className={className}
-            backgroundColor={backgroundColor}
+            $gap={gap}
+            $backgroundColor={backgroundColor}
         >
             {children}
         </StyledFlex>

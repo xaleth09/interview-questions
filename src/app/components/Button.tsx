@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
+import {COLORS, SIZES} from "@/app/design-tokens";
 
 type StyledButtonProps = {
     type?: "primary" | "secondary" | "tertiary";
@@ -9,6 +10,10 @@ type StyledButtonProps = {
 }
 
 const StyledButton = styled.button<StyledButtonProps>`
+    height: ${SIZES.MD.px};
+    border: 1px solid ${COLORS.BLACK};
+    border-radius: ${SIZES.XXXS.px};
+    cursor: pointer;
     ${({size, disabled, loading}) => `
         width: ${size === 'fullwidth' ? '100%' : 'initial'};
     `}
@@ -17,6 +22,7 @@ const StyledButton = styled.button<StyledButtonProps>`
 type Props = {
     onClick?: (event?: React.MouseEvent<HTMLButtonElement>) => void;
     children: string | string[];
+    className?: string;
 } & StyledButtonProps;
 
 export const Button = ({
@@ -25,6 +31,7 @@ export const Button = ({
                            loading,
                            onClick,
                            children,
+                           className
                        }: Props) => {
 
     const handleOnClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -39,6 +46,7 @@ export const Button = ({
             disabled={disabled}
             loading={loading}
             onClick={handleOnClick}
+            className={className}
         >
             {children}
         </StyledButton>

@@ -3,14 +3,14 @@
 import {apiResult1} from "@/app/data";
 import {useState} from "react";
 
-const Input = ({type, rest, onChange}: {
-    type: 'TEXT_INPUT' | 'DROPDOWN_SELECT';
-    rest: any;
+const Input = ({type, inputParams, onChange}: {
+    type: 'TEXT_INPUT' | 'DROPDOWN_SELECT' | 'RADIO_OPTIONS' | 'CHECKLIST';
+    inputParams: any;
     onChange: (id: number, value: string) => void;
 }) => {
     switch (type) {
         case 'TEXT_INPUT':
-            const {id, label, placeholder} = rest;
+            const {id, label, placeholder} = inputParams;
             return (
                 <div>
                     <span>{label}</span>
@@ -22,7 +22,7 @@ const Input = ({type, rest, onChange}: {
                 </div>
             )
         case 'DROPDOWN_SELECT':
-            const {default_value, options} = rest;
+            const {default_value, options} = inputParams;
             return (
                 <select>
                     {options.map((option: string) => (
@@ -40,7 +40,7 @@ const Inputs = ({inputs, onChange}: { inputs: any, onChange: (id: number, value:
         <>
             {/*@ts-ignore*/}
             {inputs.map(({type, ...rest}) => (
-                <Input key={`input-${type}`} type={type} rest={rest} onChange={onChange}/>
+                <Input key={`input-${type}`} type={type} inputParams={rest} onChange={onChange}/>
             ))}
         </>
     )
