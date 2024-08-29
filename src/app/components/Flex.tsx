@@ -2,6 +2,9 @@ import React, {FC} from 'react';
 import styled from 'styled-components';
 import {COLORS, ColorValues} from '../design-tokens';
 
+type GenericOnClick<T = HTMLButtonElement> = React.MouseEventHandler<T> | React.KeyboardEventHandler<T>;
+
+
 type FlexProps = {
     flexGrow?: number;
     flexShrink?: number;
@@ -25,6 +28,7 @@ type FlexProps = {
     testID?: string;
     className?: string; // { [string]: string | number, ... },
     children?: React.ReactNode;
+    onClick?: any;
 };
 
 export type ColumnProps = {
@@ -173,6 +177,7 @@ const getAlignContent = (
 };
 
 type StyledFlexProps = {
+    onClick?: any;
     $flexDirection: 'row' | 'column';
     $flexWrap: FlexWrap;
     $flexJustifyContent: JustifyContent;
@@ -241,6 +246,7 @@ export const Row: FC<RowProps> = ({
                                       backgroundColor,
                                       gap,
                                       className,
+                                      onClick,
                                   }) => {
     const flexWrap = getFlexWrap(wrap, wrapReverse);
     const flexJustifyContent = getJustifyContent(
@@ -269,6 +275,7 @@ export const Row: FC<RowProps> = ({
             className={className}
             $gap={gap}
             $backgroundColor={backgroundColor}
+            onClick={onClick}
         >
             {children}
         </StyledFlex>
@@ -304,6 +311,7 @@ export const Column: FC<ColumnProps> = ({
                                             backgroundColor,
                                             gap,
                                             className,
+                                            onClick,
                                         }) => {
     const flexWrap = getFlexWrap(wrap, wrapReverse);
     const flexJustifyContent = getJustifyContent(
@@ -339,6 +347,7 @@ export const Column: FC<ColumnProps> = ({
             className={className}
             $gap={gap}
             $backgroundColor={backgroundColor}
+            onClick={onClick}
         >
             {children}
         </StyledFlex>

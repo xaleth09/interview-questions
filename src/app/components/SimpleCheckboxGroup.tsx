@@ -4,7 +4,6 @@ import {Column} from "@/app/components/Flex";
 
 const RoundedBox = styled.div<{ selected: boolean }>`
     display: flex;
-    border: 2px solid ${({selected}) => selected ? '#00417D' : '#EEEEEE'};
     border-radius: 8px;
     cursor: pointer;
     padding: 11px 22px;
@@ -14,6 +13,7 @@ const CheckboxSquare = styled(RoundedBox)<{ selected: boolean }>`
     padding: 0;
     height: 18px;
     width: 18px;
+    border: 2px solid ${({selected}) => selected ? '#00417D' : 'cornflowerblue'};
 `
 
 

@@ -20,7 +20,7 @@ const StyledButton = styled.button<StyledButtonProps>`
 `
 
 type Props = {
-    onClick?: (event?: React.MouseEvent<HTMLButtonElement>) => void;
+    onClick?: any;
     children: string | string[];
     className?: string;
 } & StyledButtonProps;
